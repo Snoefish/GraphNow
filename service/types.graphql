@@ -1,16 +1,134 @@
-type User @model {
+# type User @model {
+#   id: ID! @isUnique
+#   name: String!
+#   alias: String! @isUnique
+
+#   # You can declare relations between models like this
+#   posts: [Post!]! @relation(name: "UserPosts")
+# }
+
+# type Post @model {
+#   id: ID! @isUnique
+#   title: String!
+
+#   # Every relation also required a back-relation (to determine 1:1, 1:n or n:m)
+#   author: User! @relation(name: "UserPosts")
+# }
+
+type Table @model {
   id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  name: String! @isUnique
+  fields: [Field!]! @relation(name: "TableFields")
+}
+
+type Field @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
   name: String!
-  alias: String! @isUnique
-
-  # You can declare relations between models like this
-  posts: [Post!]! @relation(name: "UserPosts")
+  type: String!
+  isUnique: Boolean!
+  isRequired: Boolean!
+  relation: String
+  table: Table! @relation(name: "TableFields")
 }
 
-type Post @model {
-  id: ID! @isUnique
-  title: String!
 
-  # Every relation also required a back-relation (to determine 1:1, 1:n or n:m)
-  author: User! @relation(name: "UserPosts")
-}
+# mutation {
+#   createTable(
+#     name: "Incident"
+#   ) {
+#     schema: String!
+#   }
+# }
+# "
+# type Incident {
+#   id: ID! @isUnique
+#   createdAt: DateTime!
+#   updatedAt: DateTime!
+# }
+# "
+
+# mutation {
+#   createField(
+#     name: "shortDescription"
+#     type: "String"
+#     isUnique: false
+#     isRequired: true
+#     tableId: "some id" # reference to incident
+#   ) {
+#     schema: String!
+#   }
+# }
+
+# "
+# type Incident {
+#   ...
+#   shortDescription: String!
+# }
+# "
+
+
+# ## create user table
+# mutation {
+#   createTable(
+#     name: "User"
+#   ) {
+#     schema: String!
+#   }
+# }
+
+# "
+# type User {
+#   id: ID! @isUnique
+#   createdAt: DateTime!
+#   updatedAt: DateTime!
+# }
+# "
+
+# mutation {
+#   createField(
+#     name: "name"
+#     type: "String"
+#     isUnique: false
+#     isRequired: true
+#     tableId: # reference to User table
+#   ) {
+#     schema: String!
+#   }
+# }
+
+# "
+# type User {
+#   ...
+#   name: String!
+# }
+# "
+
+# mutation {
+#   createField(
+#     name: "caller"
+#     type: "User"  # Table introspection to populate
+#     isUnique: false
+#     isRequired: true
+#     tableId: # Get table id from Incidents
+#   ) {
+#     schema: String!
+#   }
+# }
+
+# "
+# type Incident {
+#   ...
+#   caller: User! @relation(name: "UserIncidents")
+# }
+
+# type User {
+#   ...
+#   incidents: [Incident!] @relation(name: "UserIncidents")
+# }
+# "
