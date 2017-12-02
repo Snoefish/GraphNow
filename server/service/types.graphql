@@ -33,7 +33,6 @@ type Field @model {
   type: String!
   isUnique: Boolean!
   isRequired: Boolean!
-  relation: String
   table: Table! @relation(name: "TableFields")
 }
 

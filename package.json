@@ -1,0 +1,21 @@
+{
+  "name": "graph-now",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Snoefish/GraphNow.git",
+  "author": "Dylan Stewart <jdylanstewart@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node-fetch": "^1.6.7",
+    "graphql-iso-date": "^3.3.0",
+    "node-fetch": "^1.7.3",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.11.7",
+    "graphcool": "^0.10.1",
+    "graphql": "^0.11.7",
+    "ts-node": "^3.3.0"
+  }
+}
