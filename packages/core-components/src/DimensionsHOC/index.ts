@@ -1,0 +1,1 @@
+export { configureDimensionsHOC } from './DimensionsHOC';

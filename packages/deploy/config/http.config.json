@@ -1,0 +1,10 @@
+{
+  "SECRET_KEY": "devSecretKey",
+  "AUTH_SERVER": {
+    "hostname": "localhost",
+    "port": 3001,
+    "graphqlEndpoint": "graphql",
+    "authSecretKey": "devServerKey",
+    "subscriptionsEndpoint": "graphql_subscriptions"
+  }
+}

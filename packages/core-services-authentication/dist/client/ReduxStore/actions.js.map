@@ -1,0 +1,1 @@
+{"version":3,"file":"actions.js","sourceRoot":"","sources":["../../../src/client/ReduxStore/actions.ts"],"names":[],"mappings":";;AAAA,yCAAqD;AAYrD;;;;;;GAMG;AACH,kBAAyB,KAAa;IACpC,MAAM,CAAC;QACL,IAAI,EAAE,qBAAS;QACf,OAAO,EAAE;YACP,KAAK,OAAA;SACN;KACF,CAAC;AACJ,CAAC;AAPD,4BAOC;AAOD;;;;;GAKG;AACH;IACE,MAAM,CAAC;QACL,IAAI,EAAE,uBAAW;KAClB,CAAC;AACJ,CAAC;AAJD,gCAIC"}

@@ -1,0 +1,21 @@
+{
+  "name": "core-styles",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "./node_modules/.bin/tsc -p .",
+    "watch": "./node_modules/.bin/tsc -p . --watch",
+    "clean": "rm -r ./dist/*"
+  },
+  "devDependencies": {
+    "typescript": "2.5.3",
+    "@types/inline-style-prefixer": "^3.0.0"
+  },
+  "dependencies": {
+    "typestyle": "^1.4",
+    "csstips": "^0.2",
+    "csx": "^8",
+    "inline-style-prefixer": "^3.0.8"
+  }
+}

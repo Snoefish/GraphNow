@@ -1,0 +1,1 @@
+export { prefixedStyle } from './prefixedStyle';

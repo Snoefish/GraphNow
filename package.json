@@ -1,21 +1,56 @@
 {
-  "name": "graph-now",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/Snoefish/GraphNow.git",
-  "author": "Dylan Stewart <jdylanstewart@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@types/node-fetch": "^1.6.7",
-    "graphql-iso-date": "^3.3.0",
-    "node-fetch": "^1.7.3",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
-  },
-  "devDependencies": {
-    "@types/graphql": "^0.11.7",
-    "graphcool": "^0.10.1",
-    "graphql": "^0.11.7",
-    "ts-node": "^3.3.0"
-  }
+	"name": "ipe-web",
+	"private": true,
+	"license": "none",
+	"scripts": {
+		"test": "jest",
+		"build": "lerna run build",
+		"watch": "lerna run --parallel watch",
+		"commitmsg": "commitlint -e",
+		"commit": "commit",
+		"clean-graphql": "rm -r node_modules/*/node_modules/@types/graphql & rm -r node_modules/*/node_modules/graphql & rm -r packages/*/node_modules/**/@types/react & rm -r node_modules/@types/*/node_modules/@types/react"
+	},
+	"jest": {
+		"transform": {
+			".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+		},
+		"testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js"
+		],
+		"snapshotSerializers": [
+			"<rootDir>/node_modules/enzyme-to-json/serializer"
+		],
+		"setupTestFrameworkScriptFile": "<rootDir>/jestSetupScript.js",
+		"testPathIgnorePatterns": [
+			"/node_modules/",
+			"/dist/"
+		],
+		"transformIgnorePatterns": [
+			"<rootDir>/node_modules/(?!prontto)"
+		]
+	},
+	"publishConfig": {
+		"@jpl:registry": "http://unpm.jpl.nasa.gov/"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^3.2.0",
+		"@commitlint/config-angular": "^3.1.1",
+		"@commitlint/prompt-cli": "^3.2.0",
+		"@types/enzyme": "^2.8.9",
+		"@types/jest": "^21.1.1",
+		"cz-conventional-changelog": "^2.0.0",
+		"enzyme": "^3.0.0",
+		"enzyme-to-json": "^3.0.1",
+		"husky": "^0.14.3",
+		"jest": "^21.2.1",
+		"lerna": "^2.4.0",
+		"ts-jest": "^21.0.1",
+		"ts-node": "^3.3.0",
+		"tslint": "^5.7.0",
+		"typescript": "2.5.3",
+		"enzyme-adapter-react-16": "^1.0.2"
+	}
 }

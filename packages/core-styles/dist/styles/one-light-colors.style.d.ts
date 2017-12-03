@@ -1,0 +1,28 @@
+import { ColorHelper } from 'csx';
+export { ColorHelper };
+export declare const colors: {
+    foreground: ColorHelper;
+    foregroundBold: ColorHelper;
+    background: ColorHelper;
+    darkBackground: ColorHelper;
+    shadow: ColorHelper;
+    input: ColorHelper;
+    blackDark: ColorHelper;
+    blackLight: ColorHelper;
+    redLight: ColorHelper;
+    redDark: ColorHelper;
+    greenLight: ColorHelper;
+    greenDark: ColorHelper;
+    yellowLight: ColorHelper;
+    yellowDark: ColorHelper;
+    blueLight: ColorHelper;
+    blueDark: ColorHelper;
+    magentaLight: ColorHelper;
+    magentaDark: ColorHelper;
+    cyanLight: ColorHelper;
+    cyanDark: ColorHelper;
+    whiteLight: ColorHelper;
+    whiteDark: ColorHelper;
+    orangeLight: ColorHelper;
+    orangeDark: ColorHelper;
+};

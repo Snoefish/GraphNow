@@ -1,0 +1,1 @@
+export { configureLoadQueryHOC } from './LoadQueryHOC';

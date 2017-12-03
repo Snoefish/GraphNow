@@ -1,0 +1,21 @@
+type Table @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  name: String! @isUnique
+  fields: [Field!]! @relation(name: "TableFields")
+}
+
+type Field @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  name: String!
+  type: String!
+  isUnique: Boolean!
+  isList: Boolean!
+  isRequired: Boolean!
+  table: Table! @relation(name: "TableFields")
+}

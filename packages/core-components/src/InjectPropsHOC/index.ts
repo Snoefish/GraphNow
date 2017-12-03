@@ -1,0 +1,1 @@
+export { configureInjectPropsHOC } from './InjectPropsHOC';
