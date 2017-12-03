@@ -113,7 +113,7 @@ var Authentication = /** @class */ (function (_super) {
                                 }),
                                 body: JSON.stringify({
                                     operationName: 'VerifyToken',
-                                    query: "\n                query VerifyToken($token: String!) {\n                  Authentication {\n                    verifyToken(token: $token){\n                      username\n                      authorizations {\n                        simulator\n                      }\n                    }\n                  }\n                }\n              ",
+                                    query: "\n                query VerifyToken($token: String!) {\n                  Authentication {\n                    verifyToken(token: $token){\n                      username\n                      authorizations {\n                        graphNow\n                      }\n                    }\n                  }\n                }\n              ",
                                     variables: {
                                         token: storedToken,
                                     },

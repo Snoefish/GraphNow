@@ -29,7 +29,7 @@ export class Authentication extends React.PureComponent<Props> {
                     verifyToken(token: $token){
                       username
                       authorizations {
-                        simulator
+                        graphNow
                       }
                     }
                   }

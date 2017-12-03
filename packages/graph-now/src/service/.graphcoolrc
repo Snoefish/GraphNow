@@ -1,0 +1,3 @@
+targets:
+  dev: local/cjapptdzb00040160sf97d2jg
+  default: dev

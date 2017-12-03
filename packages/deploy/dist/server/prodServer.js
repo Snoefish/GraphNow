@@ -62164,6 +62164,13 @@ var userProfiles = {
             graphNow: ['read', 'write'],
         },
     },
+    kevin: {
+        username: 'kevin',
+        password: 'password',
+        authorizations: {
+            graphNow: ['read', 'write'],
+        },
+    },
 };
 /**
  * Function to authenticate a username and password against JPL LDAP

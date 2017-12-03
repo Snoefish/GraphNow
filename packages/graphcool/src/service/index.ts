@@ -1,1 +1,0 @@
-export { startUpdaterService } from './updaterService';

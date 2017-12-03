@@ -1,7 +1,0 @@
-types: [
-  ./types.graphql,
-  ./generatedTypes.graphql
-  ]
-
-permissions:
-- operation: "*"

@@ -24,7 +24,7 @@ export async function verifyJWT(authURL: string, token: string): Promise<string 
             verifyToken(token: $token){
               username
               authorizations {
-                simulator
+                graphNow
               }
             }
           }

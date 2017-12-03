@@ -1,5 +1,5 @@
 {
-  "SECRET_KEY": "devSecretKey",
+  "SECRET_KEY": "devServerKey",
   "AUTH_SERVER": {
     "hostname": "localhost",
     "port": 3001,

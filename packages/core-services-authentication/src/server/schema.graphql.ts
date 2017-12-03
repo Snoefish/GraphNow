@@ -12,7 +12,7 @@ export const schema = gql`
   }
 
   type Authorizations {
-    simulator: [String!]!
+    graphNow: [String!]!
   }
 
   extend type Queries {

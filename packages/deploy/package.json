@@ -57,6 +57,7 @@
 		"cors": "^2.8.4",
 		"core-services-logging": "^0.0.1",
 		"html-loader": "^0.5.1",
-		"modified-graphiql": "0.0.1"
+		"modified-graphiql": "0.0.1",
+		"database-manager": "0.0.1"
 	}
 }
